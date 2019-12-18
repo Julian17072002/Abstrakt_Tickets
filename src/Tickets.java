@@ -1,12 +1,15 @@
 
 public class Tickets {
 
-//	private static Tickets[] vTickets; 
-
 	  public static void main (String[] args) {
-//		  vTickets[0] = new SportTickets("Barcelona", "BAR vs RM",100 ,5);
-//		  vTickets[1] = new KonzertTickets("Wien", "Bach", 74, 37);
-//		  vTickets[2] = new TheatherTickets("Inssbruck", "Romeo und Julia", 9, 165);
+		    SportTickets st1 = new SportTickets("Barcelona", "BAR-RM", 120, 10);
+			st1.output();
+	
+			KonzertTickets ct1 = new KonzertTickets("Innsbruck", "Bach", 100, 200);
+			ct1.output();
+			
+			TheatherTickets tt1 = new TheatherTickets("Wien", "Romeo_und_Julia", 50, 20);
+			tt1.output();
 	  }
 }
 
