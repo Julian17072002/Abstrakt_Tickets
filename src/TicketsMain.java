@@ -3,23 +3,31 @@ abstract class TicketsMain {
 
 	   static String eventOrt;
 	   static String eventName;
-	   static int basisPreis = 10;
-	   static int ticketPreis;
+	   static double basisPreis = 10.0;
+	   private double ticketPreis;
 
-	   public TicketsMain (String ort, String name, int preis) {
+	   public TicketsMain (String ort, String name, double preis) {
 		    eventOrt = ort;
 		    eventName = name;
 		    basisPreis = preis;
 	   }   
-	
-	   public abstract int berechneTicketpreis();
+
+	public abstract double berechneTicketpreis();
 	   
-	   public static void output() {
+	   public void output() {
 	      String text;
 	      text  = "Eventort: " + eventOrt;
 	      text += ", Eventname: " + eventName;
-	      text += ", Preis: " + ticketPreis + " Euro";
+	      text += ", Preis: " + getTicketPreis() + " Euro";
 	      System.out.println(text);
 	      System.out.println(" ");
 	   }
+
+	public double getTicketPreis() {
+		return ticketPreis;
+	}
+
+	public double setTicketPreis(double ticketPreis) {
+		return this.ticketPreis = ticketPreis;
+	}
 }
